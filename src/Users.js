@@ -20,7 +20,7 @@ class Users extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  users: state.entities.users,
+  users: state.entities.users.list,
 });
 const mapDispatchToProps = (dispatch) => ({
   loadUsers: () => dispatch(loadUsers()),

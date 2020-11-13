@@ -3,11 +3,11 @@ import { apiCallBegan } from "./api";
 
 const slice = createSlice({
   name: "users",
-  initialState: [{ name: "Bob" }],
+  initialState: { list: [] },
   reducers: {
     usersReceived: (users, action) => {
-      console.log(users, action);
-      users = action.payload;
+      //console.log(action.payload);
+      users.list = action.payload;
     },
   },
 });
